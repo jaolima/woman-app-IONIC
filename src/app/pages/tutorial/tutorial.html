@@ -1,0 +1,47 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color='primary' (click)="startApp()" [hidden]="!showSkip">Skip</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="false">
+    <ion-slide>
+      <img src="assets/img/about-app.png" class="slide-image"  />
+      <h2 class="slide-title animated bounce">
+        Seja bem vinda ao GoWoman
+      </h2>
+    <h4></h4>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/chatbot.png" class="slide-image" />
+
+      <h2 class="slide-title animated bounce">Saiba qual decisão tomar</h2>
+      <h4>
+      O chatbot te mostrará a melhor opção
+      </h4>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/woman.png" class="slide-image" />
+      <h2 class="slide-title"><b>Proteção</b></h2>
+      <h4>
+        Sua maior arma é o conhecimento, se informe sobre seus direitos.
+      </h4>
+    </ion-slide>
+
+    <ion-slide>
+      <img  src="assets/img/shield.png" class="slide-image" />
+      <h2 class="slide-title">Segurança</h2>
+      <h4>Todos os seus dados estão em segurança. O fornecimento de informações pessoais é opcional, você pode fazer tudo de forma anônima</h4>
+      <ion-button fill="clear" (click)="startApp()">
+        Continuar
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+q

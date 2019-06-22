@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div class="ion-text-center">
+      <ion-title>Wonder Woman</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="about-header">
+    <a href="{{mulher[0].link}}"><img src="{{mulher[0].picture_url}}" alt="ionic logo"></a>
+  </div>
+  <div class="about-info">
+    <h4 class="ion-padding-start ion-text-center"><b>{{mulher[0].name}}</b></h4>
+    <p class="ion-padding-start ion-padding-end">
+    {{mulher[0].description}}
+    </p>
+  </div>
+</ion-content>

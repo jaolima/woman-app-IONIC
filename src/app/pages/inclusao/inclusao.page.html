@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div class="ion-text-center">
+      <ion-title>Inovação</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h2  class="title ion-text-center" >Eventos</h2>
+  <ion-card>
+    <a href=""><img src="https://cdn.pixabay.com/photo/2017/07/21/23/57/concert-2527495_960_720.jpg"
+                    routerLink="/events-detail"></a>
+  </ion-card>
+<!--  <div class="bar bar-header bar-dark">-->
+<!--    <h1 class="title">Entreterimento</h1>-->
+<!--    <img src="https://ionicframework.com/docs/demos/api/card/madison.jpg">-->
+<!--  </div>-->
+
+  <div class="bar bar-header bar-dark">
+    <h1 class="title ion-text-center" >Mulheres Inspiradoras</h1>
+  </div>
+  <div class="scroll listaCategorias" scrollX="true">
+    <ion-col size="10"*ngFor="let mulher of mulheres">
+    <ion-card [routerLink]="['/wonder-womans', mulher.id ]">
+      <a><img width="200px" height="200px" src="{{mulher.picture_url}}"></a>
+      <ion-card-header>
+<!--        <ion-card-subtitle>{{mulher.data}}</ion-card-subtitle>-->
+        <ion-card-title>{{mulher.name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+<!--        {{mulher.local}}-->
+      </ion-card-content>
+    </ion-card>
+    </ion-col>
+  </div>
+</ion-content>
+
