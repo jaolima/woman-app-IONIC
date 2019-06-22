@@ -24,16 +24,6 @@ export class AboutPage implements OnInit {
     },
     {
       tag: 'option',
-      'cf-label': 'Péssima!',
-      value: 'bad'
-    },
-    {
-      tag: 'option',
-      'cf-label': 'Não está um bom dia!',
-      value: 'not-good-day'
-    },
-    {
-      tag: 'option',
       'cf-label': 'Mal',
       value: 'bad'
     },
@@ -50,9 +40,10 @@ export class AboutPage implements OnInit {
     const formDataSerialized = this.cf.getFormData(true);
     console.log(formDataSerialized);
     if (formDataSerialized.feeling[0] === 'bad') {
-      this.cf.addRobotChatResponse('bad');
+      this.cf.addRobotChatResponse('sinto muito, por você estar passando por isso, aqui temos um <a href="/app/tabs/map">link<a>' +
+        ' com atendimentos psicológicos especializados gratuitos');
     } else if (formDataSerialized.feeling[0] === 'good') {
-      this.cf.addRobotChatResponse('good');
+      this.cf.addRobotChatResponse('Que bom que está bem, gostaria de ver nossos <a href="/events-detail">eventos</a>!');
     }
   }
 
